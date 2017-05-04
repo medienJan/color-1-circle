@@ -1,0 +1,110 @@
+/* Diese Regel nicht verändern! */
+div {
+  background-color: black;
+  position: absolute;
+}
+
+/* Deine Parameter: */
+$globalRadius: 50px;
+$blockHeight: 1px;
+$abstand: 16;
+$offset: 1;
+
+$breite: $globalRadius * 2;
+$hoehe: $globalRadius * 2;
+
+$hoehe1: 0 * $abstand + $offset;
+$hoehe2: 1 * $abstand + $offset;
+$hoehe3: 2 * $abstand + $offset;
+$hoehe4: 3 * $abstand + $offset;
+$hoehe5: 4 * $abstand + $offset;
+$hoehe6: 5 * $abstand + $offset;
+$hoehe7: 6 * $abstand + $offset;
+
+@function sqrt($r) {
+  $x0: 1;
+  $x1: $x0;
+  @for $i from 1 through 10 {
+    $x1: $x0 - ($x0 * $x0 - abs($r)) / (2 * $x0);
+    $x0: $x1;
+  }
+  @return $x1;
+}
+
+//Breite des Kreises auf Hoehe yPos
+@function circleWidth($yPos) {
+  $var1: 2 * 50 * $yPos;
+  $var2: $yPos * $yPos;
+  @if ($var1 > $var2) {
+     @return 2 * sqrt($var1 - $var2) * 1%;
+  }
+  @return 0%;
+}
+
+/* Ab hier deine Regeln :-) */
+body {
+  width: $breite;
+  margin: 0 auto;
+}
+
+.el {
+  width: $breite;
+  height: $hoehe;
+  background-color: #fff;
+}
+
+$thisWidth: circleWidth($hoehe1);
+.el-1 {
+  left: 50% - $thisWidth / 2;
+  top: $hoehe1 * 1%;
+  width: $thisWidth;
+  height: $blockHeight;
+}
+
+$thisWidth: circleWidth($hoehe2);
+.el-2 {
+  left: 50% - $thisWidth / 2;
+  top: $hoehe2 * 1%;
+  width: $thisWidth;
+  height: $blockHeight;
+}
+
+$thisWidth: circleWidth($hoehe3);
+.el-3 {
+  left: 50% - $thisWidth / 2;
+  top: $hoehe3 * 1%;
+  width: $thisWidth;
+  height: $blockHeight;
+}
+
+$thisWidth: circleWidth($hoehe4);
+.el-4 {
+  left: 50% - $thisWidth / 2;
+  top: $hoehe4 * 1%;
+  width: $thisWidth;
+  height: $blockHeight;
+}
+
+$thisWidth: circleWidth($hoehe5);
+.el-5 {
+  left: 50% - $thisWidth / 2;
+  top: $hoehe5 * 1%;
+  width: $thisWidth;
+  height: $blockHeight;
+}
+
+$thisWidth: circleWidth($hoehe6);
+.el-6 {
+  left: 50% - $thisWidth / 2;
+  top: $hoehe6 * 1%;
+  width: $thisWidth;
+  height: $blockHeight;
+}
+
+$thisWidth: circleWidth($hoehe7);
+.el-7 {
+  left: 50% - $thisWidth / 2;
+  top: $hoehe7 * 1%;
+  width: $thisWidth;
+  height: $blockHeight;
+}
