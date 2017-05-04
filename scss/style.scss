@@ -1,15 +1,10 @@
-/* Diese Regel nicht verändern! */
-div {
-  background-color: black;
-  position: absolute;
-}
-
-/* Deine Parameter: */
+/* Changeable parameters */
 $globalRadius: 50px;
 $blockHeight: 1px;
 $abstand: 16;
 $offset: 1;
 
+/* Calculated parameters */
 $breite: $globalRadius * 2;
 $hoehe: $globalRadius * 2;
 
@@ -21,6 +16,7 @@ $hoehe5: 4 * $abstand + $offset;
 $hoehe6: 5 * $abstand + $offset;
 $hoehe7: 6 * $abstand + $offset;
 
+/* Function to calculate the square root */
 @function sqrt($r) {
   $x0: 1;
   $x1: $x0;
@@ -31,7 +27,7 @@ $hoehe7: 6 * $abstand + $offset;
   @return $x1;
 }
 
-//Breite des Kreises auf Hoehe yPos
+/* Width in Percent of a Circle at height yPos */
 @function circleWidth($yPos) {
   $var1: 2 * 50 * $yPos;
   $var2: $yPos * $yPos;
@@ -41,7 +37,12 @@ $hoehe7: 6 * $abstand + $offset;
   @return 0%;
 }
 
-/* Ab hier deine Regeln :-) */
+/******** Rules ********/
+div {
+  background-color: black;
+  position: absolute;
+}
+
 body {
   width: $breite;
   margin: 0 auto;

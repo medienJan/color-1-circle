@@ -1,12 +1,13 @@
-@charset "UTF-8";
-/* Diese Regel nicht verändern! */
+/* Changeable parameters */
+/* Calculated parameters */
+/* Function to calculate the square root */
+/* Width in Percent of a Circle at height yPos */
+/******** Rules ********/
 div {
   background-color: black;
   position: absolute;
 }
 
-/* Deine Parameter: */
-/* Ab hier deine Regeln :-) */
 body {
   width: 100px;
   margin: 0 auto;
