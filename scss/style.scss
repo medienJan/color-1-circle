@@ -26,7 +26,7 @@ $offset: 0.1;
 }
 
 /* Mixins */
-@mixin circleElem($index){
+@mixin circleElem($index) {
   $hoehe: $index * $distance + $offset;
   $thisWidth: circleWidth($hoehe);
   left: 50% - $thisWidth / 2;
@@ -56,8 +56,8 @@ body {
   background-color: #fff;
 }
 
-@for $i from 0 through 6{
-  .el-#{$i}{
+@for $i from 0 through 6 {
+  .el-#{$i} {
     @include circleElem($i);
   }
 }
