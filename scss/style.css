@@ -2,6 +2,7 @@
 /* Calculated parameters */
 /* Function to calculate the square root */
 /* Width in Percent of a Circle at height yPos */
+/* Mixinss */
 /******** Rules ********/
 div {
   background-color: black;
@@ -9,8 +10,12 @@ div {
 }
 
 body {
-  width: 100px;
-  margin: 0 auto;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .el {
@@ -19,51 +24,51 @@ body {
   background-color: #fff;
 }
 
+.el-0 {
+  left: 46.8393%;
+  top: 0.1%;
+  width: 6.32139%;
+  height: 1px;
+}
+
 .el-1 {
-  left: 40.05013%;
-  top: 1%;
-  width: 19.89975%;
+  left: 13.2469%;
+  top: 16.1%;
+  width: 73.50619%;
   height: 1px;
 }
 
 .el-2 {
-  left: 12.43672%;
-  top: 17%;
-  width: 75.12656%;
+  left: 3.31392%;
+  top: 32.1%;
+  width: 93.37216%;
   height: 1px;
 }
 
 .el-3 {
-  left: 2.97873%;
-  top: 33%;
-  width: 94.04254%;
+  left: 0.03611%;
+  top: 48.1%;
+  width: 99.92777%;
   height: 1px;
 }
 
 .el-4 {
-  left: 0.01%;
-  top: 49%;
-  width: 99.98%;
+  left: 2.02928%;
+  top: 64.1%;
+  width: 95.94144%;
   height: 1px;
 }
 
 .el-5 {
-  left: 2.30304%;
-  top: 65%;
-  width: 95.39392%;
+  left: 10.0752%;
+  top: 80.1%;
+  width: 79.84961%;
   height: 1px;
 }
 
 .el-6 {
-  left: 10.76991%;
-  top: 81%;
-  width: 78.46018%;
-  height: 1px;
-}
-
-.el-7 {
-  left: 32.94128%;
-  top: 97%;
-  width: 34.11744%;
+  left: 30.64051%;
+  top: 96.1%;
+  width: 38.71899%;
   height: 1px;
 }
