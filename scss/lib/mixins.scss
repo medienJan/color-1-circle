@@ -1,0 +1,9 @@
+
+@mixin circleElem($index) {
+  $hoehe: $index * $distance + $offset;
+  $thisWidth: circleWidth($hoehe);
+  left: 50% - $thisWidth / 2;
+  top: $hoehe * 1%;
+  width: $thisWidth;
+  height: $elemHeight;
+}
